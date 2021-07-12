@@ -27,10 +27,19 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'pry-rails'
+
 # devise
 gem 'devise'
 gem 'devise_token_auth'
 gem 'rack-cors'
+
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem 'omniauth-oauth2'
+gem "omniauth-rails_csrf_protection"
+
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
