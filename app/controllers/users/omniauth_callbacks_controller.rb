@@ -9,11 +9,12 @@ module Users
 
       if @resource.save!
         yield @resource if block_given?
-        auth_header = @resource.build_auth_header(@token.token, @token.client)
-        auth_header.each do |key, value|
-          cookies[:"#{key}"] = { value: value, httponly: true }
-        end
-        redirect_to 'http://localhost:3001'
+        update_auth_header
+        # auth_header = @resource.build_auth_header(@token.token, @token.client)
+        # auth_header.each do |key, value|
+        #   cookies[:"#{key.gsub("-", "_")}_name"] = { value: value, httponly: true }
+        # end
+        redirect_to 'http://localhost:3001', test: 'test'
         # render json: @resource, status: :ok
       else
         render json: { message: "failed to login" }, status: 500

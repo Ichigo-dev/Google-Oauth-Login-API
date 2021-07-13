@@ -22,11 +22,12 @@ module Myapp
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'http://localhost:3001'
         resource '*',
           :headers => :any,
           :expose => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-          :methods => [:get, :post, :options, :delete, :put]
+          :methods => [:get, :post, :options, :delete, :put],
+          credentials: true
       end
     end
   end

@@ -8,4 +8,5 @@ DeviseTokenAuth.setup do |config|
                          :'expiry' => 'expiry',
                          :'uid' => 'uid',
                          :'token-type' => 'token-type' }
+  config.cookie_enabled = true
 end
