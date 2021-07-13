@@ -1,3 +1,7 @@
+# Googleログイン、トークン認証API
+グーグルログイン、Cookieを用いたセッション管理を devise_token_auth を用いて実装している。
+
+このAPIのデモ試用を[このリポジトリ](https://github.com/Ichigo-dev/Google-Oauth-Login-React-Demo)で行った。
 # Ruby on Rails 6.* by Docker
 ## Version
 - Ruby 2.7.1  
